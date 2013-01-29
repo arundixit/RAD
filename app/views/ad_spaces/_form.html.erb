@@ -1,0 +1,29 @@
+<%= form_for(@ad_space) do |f| %>
+  <% if @ad_space.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ad_space.errors.count, "error") %> prohibited this ad_space from being saved:</h2>
+
+      <ul>
+      <% @ad_space.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :length %><br />
+    <%= f.text_area :length %>
+  </div>
+  <div class="field">
+    <%= f.label :breadth %><br />
+    <%= f.text_area :breadth %>
+  </div>
+  <div class="field">
+    <%= f.label :position %><br />
+    <%= f.text_area :position %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

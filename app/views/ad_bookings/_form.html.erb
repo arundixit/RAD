@@ -1,0 +1,45 @@
+<%= form_for(@ad_booking) do |f| %>
+  <% if @ad_booking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ad_booking.errors.count, "error") %> prohibited this ad_booking from being saved:</h2>
+
+      <ul>
+      <% @ad_booking.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ad_id %><br />
+    <%= f.number_field :ad_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ad_space_id %><br />
+    <%= f.number_field :ad_space_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ad_rate_id %><br />
+    <%= f.number_field :ad_rate_id %>
+  </div>
+  <div class="field">
+    <%= f.label :from_date %><br />
+    <%= f.date_select :from_date %>
+  </div>
+  <div class="field">
+    <%= f.label :to_date %><br />
+    <%= f.date_select :to_date %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :ispaid %><br />
+    <%= f.check_box :ispaid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ad space:</b>
+  <%= @ad_rate.ad_space_id %>
+</p>
+
+<p>
+  <b>Rate:</b>
+  <%= @ad_rate.rate %>
+</p>
+
+<p>
+  <b>Frequency:</b>
+  <%= @ad_rate.frequency_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_ad_rate_path(@ad_rate) %> |
+<%= link_to 'Back', ad_rates_path %>

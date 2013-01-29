@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Length:</b>
+  <%= @ad_space.length %>
+</p>
+
+<p>
+  <b>Breadth:</b>
+  <%= @ad_space.breadth %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @ad_space.position %>
+</p>
+
+
+<%= link_to 'Edit', edit_ad_space_path(@ad_space) %> |
+<%= link_to 'Back', ad_spaces_path %>

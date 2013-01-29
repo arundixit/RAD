@@ -1,0 +1,35 @@
+<h1>Listing ad_bookings</h1>
+
+<table>
+  <tr>
+    <th>Ad</th>
+    <th>Ad space</th>
+    <th>Ad rate</th>
+    <th>From date</th>
+    <th>To date</th>
+    <th>Amount</th>
+    <th>Ispaid</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ad_bookings.each do |ad_booking| %>
+  <tr>
+    <td><%= ad_booking.ad_id %></td>
+    <td><%= ad_booking.ad_space_id %></td>
+    <td><%= ad_booking.ad_rate_id %></td>
+    <td><%= ad_booking.from_date %></td>
+    <td><%= ad_booking.to_date %></td>
+    <td><%= ad_booking.amount %></td>
+    <td><%= ad_booking.ispaid %></td>
+    <td><%= link_to 'Show', ad_booking %></td>
+    <td><%= link_to 'Edit', edit_ad_booking_path(ad_booking) %></td>
+    <td><%= link_to 'Destroy', ad_booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ad booking', new_ad_booking_path %>

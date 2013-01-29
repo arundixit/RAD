@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ad:</b>
+  <%= @ad_booking.ad_id %>
+</p>
+
+<p>
+  <b>Ad space:</b>
+  <%= @ad_booking.ad_space_id %>
+</p>
+
+<p>
+  <b>Ad rate:</b>
+  <%= @ad_booking.ad_rate_id %>
+</p>
+
+<p>
+  <b>From date:</b>
+  <%= @ad_booking.from_date %>
+</p>
+
+<p>
+  <b>To date:</b>
+  <%= @ad_booking.to_date %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @ad_booking.amount %>
+</p>
+
+<p>
+  <b>Ispaid:</b>
+  <%= @ad_booking.ispaid %>
+</p>
+
+
+<%= link_to 'Edit', edit_ad_booking_path(@ad_booking) %> |
+<%= link_to 'Back', ad_bookings_path %>

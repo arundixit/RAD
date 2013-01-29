@@ -1,0 +1,23 @@
+<h1>Listing ad_frequencies</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ad_frequencies.each do |ad_frequency| %>
+  <tr>
+    <td><%= ad_frequency.name %></td>
+    <td><%= link_to 'Show', ad_frequency %></td>
+    <td><%= link_to 'Edit', edit_ad_frequency_path(ad_frequency) %></td>
+    <td><%= link_to 'Destroy', ad_frequency, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ad frequency', new_ad_frequency_path %>

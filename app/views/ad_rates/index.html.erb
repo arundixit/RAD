@@ -1,0 +1,27 @@
+<h1>Listing ad_rates</h1>
+
+<table>
+  <tr>
+    <th>Ad space</th>
+    <th>Rate</th>
+    <th>Frequency</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ad_rates.each do |ad_rate| %>
+  <tr>
+    <td><%= ad_rate.ad_space_id %></td>
+    <td><%= ad_rate.rate %></td>
+    <td><%= ad_rate.frequency_id %></td>
+    <td><%= link_to 'Show', ad_rate %></td>
+    <td><%= link_to 'Edit', edit_ad_rate_path(ad_rate) %></td>
+    <td><%= link_to 'Destroy', ad_rate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ad rate', new_ad_rate_path %>

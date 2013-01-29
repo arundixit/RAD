@@ -1,0 +1,2 @@
+module AdRatesHelper
+end

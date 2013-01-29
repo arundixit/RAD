@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @ad.user_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @ad.title %>
+</p>
+
+<p>
+  <b>Code details:</b>
+  <%= @ad.code_details %>
+</p>
+
+<p>
+  <b>Ispublished:</b>
+  <%= @ad.ispublished %>
+</p>
+
+<p>
+  <b>Isapproved:</b>
+  <%= @ad.isapproved %>
+</p>
+
+<p>
+  <b>Expiry date:</b>
+  <%= @ad.expiry_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_ad_path(@ad) %> |
+<%= link_to 'Back', ads_path %>
